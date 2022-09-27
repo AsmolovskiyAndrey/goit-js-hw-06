@@ -12,3 +12,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+function makeImagesBlock(img) {
+  return `
+  <li class = "img_section">
+    <img class = "img"
+      src=${img.url}
+      alt=${img.alt}
+    />
+  </li>
+  `
+}
+
+const makeBlock = images.map(makeImagesBlock).join('');
+
+const imagesEl = document.querySelector('.gallery');
+
+imagesEl.insertAdjacentHTML('afterbegin', makeBlock);
