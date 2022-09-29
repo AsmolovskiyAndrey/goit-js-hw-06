@@ -38,9 +38,8 @@ const destroyRef = document.querySelector('button[data-destroy]');
 const newBoxes = document.querySelector('#boxes');
 const afterControls = document.querySelector('#controls');
 
+
 inputRef.addEventListener('blur', amount);  //! событие потеря фокуса в инпуте
-
 createRef.addEventListener('click', createBoxes);
-
 destroyRef.addEventListener('click', destroyBoxes);
 
