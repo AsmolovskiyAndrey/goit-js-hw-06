@@ -5,7 +5,7 @@ function getRandomHexColor() {
 }
 
 function amount() {
-  return finallyAmount = inputRef.value;
+  return finallyAmount = inputRef.value; //! присвоил значение в finallyAmount из input и вернул
 }
 
 function createOneBox(size) {
@@ -18,7 +18,6 @@ function createOneBox(size) {
 }
 
 function createBoxes(amount) {
-  console.log(finallyAmount);
   for (let i = 1; i <= finallyAmount; i++) {
     createOneBox(firstSize);
     firstSize += 10;
@@ -27,7 +26,8 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   newBoxes.innerHTML = '';
-  firstSize = 30;
+  firstSize = 30; //! установил значение к изначальным
+  inputRef.value = null; //! обнулил значение в input
 }
 
 let finallyAmount = 0;
@@ -38,7 +38,7 @@ const destroyRef = document.querySelector('button[data-destroy]');
 const newBoxes = document.querySelector('#boxes');
 const afterControls = document.querySelector('#controls');
 
-inputRef.addEventListener('blur', amount);  //? событие потеря фокуса в инпуте
+inputRef.addEventListener('blur', amount);  //! событие потеря фокуса в инпуте
 
 createRef.addEventListener('click', createBoxes);
 
