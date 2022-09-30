@@ -9,12 +9,17 @@ const ingredients = [
 
 //! ========== жаль что по условию так сделать нельзя - значительно чище код (ОКАЗАЛОСЬ ЧТО МОЖНО !!!)
 const allIngridients = document.querySelector('#ingredients');
+
+const ingridientArray = [];
+
 for (const ingredient of ingredients) {
   const oneIngredient = document.createElement('li');
   oneIngredient.textContent = ingredient;
   oneIngredient.classList.add('item')
-  allIngridients.append(oneIngredient);
+  ingridientArray.push(oneIngredient);
 }
+
+allIngridients.append(...ingridientArray);
 //=============================================================================
 // const allIngridients = document.querySelector('#ingredients');
 
