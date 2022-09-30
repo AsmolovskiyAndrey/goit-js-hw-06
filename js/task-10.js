@@ -28,6 +28,7 @@ function destroyBoxes() {
   newBoxes.innerHTML = '';
   firstSize = 30; //! установил значение к изначальным
   inputRef.value = null; //! обнулил значение в input
+  finallyAmount = 0; //! обнулил значение в input
 }
 
 let finallyAmount = 0;
